@@ -18,3 +18,17 @@ Signed transaction contains the information about:
 * To whom it's been sent
 * The public key of the user
 * The signature: all the information above, hashed and signed with a private key
+
+h1. Some ways to acquire consensus
+
+h2. Proof of work
+
+The miner should add a nonce to the block, so that the block's hash has some special properties (for example, a lot of zeros at the beginning).
+The longest chain of blocks is trusted, so sometimes there will be a tie.
+
+h2. Proof of stake
+
+People vote with their cryptocurrencies for the block producers, getting a fee from each new block in return.
+Some block producers are elected, but only one of them produces blocks at a single moment of time, others just sign the produced blocks. Not all the others should sign the block for it to be valid, only a part of the group is needed.
+If a block producer misbehaves, he is punished by the rules of the blockchain where it took place.
+The aspects of this one highly depend on the chosen blockchain network.
