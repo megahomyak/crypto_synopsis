@@ -5,3 +5,16 @@ h1. Basic terminology
 - Block := A data structure containing its number, some arbitrary data, a hash of its parent and nonce.
 - Blockchain := A sequence of blocks, chained using their parents' hashes.
 - Transaction := A piece of data, incorporated in sequences into a block, that states what amount of currency have been transferred from who to who.
+
+h1. Digital signatures
+
+- A key pair := Two pieces of information that, when passed into a cryptographic function, can respectively decrypt and encrypt the same data. Basically, they reverse the product of each other.
+- Public key := A key that is accessible by anyone.
+- Private key := A key that is stored privately.
+- Digital signature := A hash of the document embedded with the document itself, encrypted with one of the keys.
+
+Signed transaction contains the information about:
+* The amount of currency
+* To whom it's been sent
+* The public key of the user
+* The signature: all the information above, hashed and signed with a private key
