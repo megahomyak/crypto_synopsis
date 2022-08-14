@@ -6,7 +6,7 @@ h1. Basic terminology
 
 - Hash := A fixed-width product of a one-way function.
 - Nonce := A number that is added to the block to make its hash acquire some specific properties, which define the block as valid.
-- Block := A data structure containing its number, some arbitrary data, a hash of its parent and nonce.
+- Block := A data structure containing its number (so that the valid block cannot just be sent twice), some arbitrary data, a hash of its parent and nonce.
 - Blockchain := A sequence of blocks, chained using their parents' hashes.
 - Transaction := A piece of data, incorporated in sequences into a block, that states what amount of currency have been transferred from who to who.
 
