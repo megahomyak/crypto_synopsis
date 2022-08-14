@@ -1,3 +1,7 @@
+h3. Resources
+
+Very good web3 info source, in Russian: https://www.youtube.com/channel/UCmizxCJ2qgvvm8AvFzzdt5g
+
 h1. Basic terminology
 
 - Hash := A fixed-width product of a one-way function.
