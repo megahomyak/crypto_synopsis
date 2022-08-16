@@ -36,3 +36,17 @@ People vote with their cryptocurrencies for the block producers, getting a fee f
 Some block producers are elected, but only one of them produces blocks at a single moment of time, others just sign the produced blocks. Not all the others should sign the block for it to be valid, only a part of the group is needed.
 If a block producer misbehaves, he is punished by the rules of the blockchain where it took place.
 The aspects of this one highly depend on the chosen blockchain network.
+
+h1. Smart contracts (from Ethereum)
+
+Smart contract is a piece of bytecode stored on the blockchain.
+It has its own address.
+Users can call functions from that contract, but they have to pay for the performed operations.
+Every operation has a "gas value".
+More difficult or blockchain-space-consuming operations have a higher gas value.
+Contract function callers must pay for the consumed gas. Remaining currency is returned to the caller.
+If too little gas is specified, it will be wasted.
+Contracts' functions are atomic: either they complete successfully and their results are merged with the blockchain, or the gas is burned for nothing (the caller's money are, thus, also burned).
+The caller decides the amount of ETH to pay for one unit of gas. Miner wants to choose the most expensive transactions, so the higher the gas price - the more chances the transaction has to get in the block.
+All of the performed operations are visible on the blockchain, and other miners are validating them when signing a block, just like with the other blockchain operations.
+In order to determine that the block with the contract execution steps is valid, the validator has to re-execute the contract on the same state of blockchain network as it was when the contract was initially executed and then compare the resulting operations to the operations published by the original executor.
